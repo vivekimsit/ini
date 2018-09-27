@@ -6,4 +6,4 @@ suite "ini":
     check:
       parsedIni.contains("general") == true
       parsedIni.len() == 1
-      parsedIni.sections().len == 1
+      parsedIni.getSection("general").getProperty("appname") == "configparser"
